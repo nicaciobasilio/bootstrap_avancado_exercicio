@@ -17,25 +17,111 @@
         text-align: center;
     }
 
+    .imagens {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .tortas {
+        height: 630px;
+        object-fit: cover;
+    }
+
+    #carousel-exemplo {
+        margin-bottom: 36px;
+    }
+
+    .card {
+        margin-bottom: 16px;
+    }
 </style>
 <body>
-    <header>
-        <h1>Receitas em dia</h1>
-    </header>
-    
-        <div class="carousel slide">
+    <div class="container">
+        <header>
+            <h1>Receitas em dia</h1>
+        </header>
+        
+        <div id="carousel-exemplo" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div data-bs-interval="3000" class="carousel-item active">
-                    <img class="imagens" src="https://cdn.pixabay.com/photo/2017/03/15/19/18/tartlet-2147173_960_720.jpg" alt="">
+                    <img class="imagens d-blok w-100" src="https://cdn.pixabay.com/photo/2010/12/13/10/05/berries-2277_960_720.jpg" />
                 </div>
-                <div class="carousel-item">
-                    <img class="imagens" src="https://cdn.pixabay.com/photo/2020/03/14/08/42/food-4930015_960_720.jpg" alt="">
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img class="imagens d-blok w-100" src="https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg" />
                 </div>
-                <div class="carousel-item">
-                    <img class="imagens" src="https://cdn.pixabay.com/photo/2010/12/13/10/05/berries-2277_960_720.jpg" alt="">
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img class="imagens d-blok w-100" src="https://cdn.pixabay.com/photo/2017/01/20/15/06/oranges-1995056_960_720.jpg" />
                 </div>
             </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card">
+                    <header class="card-header">
+                        <strong>Confeitaria</strong> 
+                    </header>
+                    <img class="tortas" src="./imagens/torta_amora.jpg" alt="Torta de amoras">
+                    <div class="card-body">
+                        <h4 class="card-title">Torta de Amora</h4>
+                        <p class="card-text">
+                            Receita completa de torta crocante de Amoras
+                        </p>
+                        <a href="#" class="btn btn-primary">Veja a receita completa aqui!</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em: <time>12/01/2023 às 02:21</time>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card">
+                    <header class="card-header">
+                        <strong>Confeitaria</strong> 
+                    </header>
+                    <img class="tortas" src="./imagens/torta_figo.jpg" alt="Torta de figos">
+                    <div class="card-body">
+                        <h4 class="card-title">Torta de Figos</h4>
+                        <p class="card-text">
+                            Receita completa de torta crocante de Figos
+                        </p>
+                        <a href="#" class="btn btn-primary">Veja a receita completa aqui!</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em: <time>12/01/2023 às 02:21</time>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card">
+                    <header class="card-header">
+                        <strong>Confeitaria</strong> 
+                    </header>
+                    <img class="tortas" src="./imagens/torta_framboesa.jpg" alt="Torta de framboesas">
+                    <div class="card-body">
+                        <h4 class="card-title">Cards do Bootstrap</h4>
+                        <p class="card-text">
+                            Receita completa de torta de Framboesas
+                        </p>
+                        <a href="#" class="btn btn-primary">Veja a receita completa aqui!</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em: <time>12/01/2023 às 02:21</time>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </div>
 
 
     <script src="./lib/bootstrap.bundle.min.js"></script>
